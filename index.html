@@ -35,15 +35,20 @@
         <h1 class="welcome-header__title">Welcome to KoKoa Clone</h1>
         <p class="welcome-header__text">If you have Kokoa Account, Log in with your email or number.</p>
     </header>
-    <form action="freinds.html" method="get" id="login-form">
+    <form action="friends.html" method="get" id="login-form">
         <!-- form의 강력한 기능 2개 : action (어디에 데이터를 보낼 지) / method (GET - 보안에 취약, URL에 포함돼도 상관없는 정보를 보냄 / POST - 백엔드 서버에 정보를 전송하는 방식) -->
-        <input name="username" type="text" placeholder="Email or phone number" />
+        <input name="username" type="text" placeholder="Email or phone number"/>
         <input name="password" type="password" placeholder="Password" />
         <input type="submit" value="Log In" />
         <input type="submit" value="Sign Up" />
         <a href="#">Find Kokoa Account or Password</a>
     </form>
-    
+    <div id="splash-screen">
+        <i class="fa-solid fa-comment"></i></a>
+    </div>
+    <div id="no-mobile">
+        <span>Your screen is too big ㅠㅠ </span>
+    </div>
     <script src="https://kit.fontawesome.com/da4e2af62c.js" crossorigin="anonymous">
     </script>
     <!-- script 는 항상 마지막에 있어야 함 (body 태그를 닫기 직전에) -->
