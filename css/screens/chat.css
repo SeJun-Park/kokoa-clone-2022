@@ -1,0 +1,173 @@
+#chat-screen {
+    background-color: #abc1d1;
+    height: 10000vh;
+}
+/* chat 에서만 body에 ID를 준 건 배경색을 바꾸고, 스크롤을 적용하기 위함이었음 */
+
+#chat-screen .alt-header,
+#chat-screen .status-bar  {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+    background-color: #abc1d1;
+}
+
+#chat-screen .status-bar {
+    z-index: 2;
+    /* z-index 는 layer 의 순서를 의미함, 기본값은 0이고 숫자가 클 수록 앞으로 나옴 */
+    /* z-index 는 position = absolute 나 position = fixed 에 설정할 수 있음 */
+}
+
+#chat-screen .alt-header {
+    z-index: 1;
+}
+
+.main-chat {
+    margin-top: 120px;
+    display: flex;
+    /* chat__timestamp 가 box로 */
+    flex-direction: column;
+    align-items: center;
+}
+
+/* main-chat은 .status-bar 과 .alt-header 뒤에 있는 layer 이므로 margin을 적용하지 않으면 두 개의 요소에 의해 가려짐 */
+
+.chat__timestamp {
+    color: white;
+    background-color: #92a4b2;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.message-row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.message-row--own {
+    justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+    background-color: var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+.message-row--own .message__info {
+    flex-direction: row-reverse;
+    /* order 속성이 아닌 방법으로 순서를 바꿔주는 방법 */
+}
+
+/*
+.message-row--own .message__bubble {
+    order: 1;
+}
+.message-row--own .message__time {
+    order: 0;
+}
+    /* order 속성은 flex children 에게만 적용됨 */
+    /* flex children 간 순서를 바꿔주고 있음 */
+
+
+.message-row img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    margin-right: 10px;
+}
+
+.message__author {
+    margin-bottom: 5px;
+    display: block;
+    /* message__author 는 span 이므로 margin 값을 적용하기 위해서는 display:block 가 필요, span은 inline 요소로 margin값이 좌우로만 적용됨 */
+}
+
+
+.message__bubble {
+    background-color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.message__info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.message__author,
+.message__time {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.reply {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+    box-sizing: border-box;
+}
+
+.reply .reply__column:first-child {
+    width: 10%;
+}
+
+.reply .reply__column:last-child {
+    width: 90%;
+    position: relative;
+}
+
+.reply input {
+    padding: 5px;
+    height: 30px;
+    width: 100%;
+    border: var(--main-border);
+    border-radius: 20px;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+    position: absolute;
+    right: -3px;
+    top: 6px;
+}
+.reply__column:last-child > i {
+    right: 40px;
+    top: 20px;
+}
+
+.reply i {
+    opacity: 0.5;
+}
+
+.reply__column button {
+    background-color: var(--yellow);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+}
+
+.reply__column button i {
+    opacity: 1;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+    outline: none;
+}
