@@ -6,7 +6,6 @@
     margin-bottom: 10px;
     font-size: 18px;
     margin-top: -15px;
-    /* screen-header 에 추가된 margin-bottom을 상쇄하는 역할 */
 }
 
 #friends-display-link i {
@@ -38,8 +37,6 @@
     to {
         opacity: 0;
         visibility: hidden;
-        /* display:none 을 animation에서 사용할 수 없음 */
-        /* scale(0) 와 같은 방법도 있으나 여기서는 버튼을 가리게 되므로 visibility:hiddden을 사용할 수 있음 */
     }
 }
 
@@ -54,6 +51,5 @@
     align-items: center;
     font-size: 122px;
     animation: hideSplashScreen 0.5s ease-in-out forwards;
-    /* forwards는 마지막 속성 값(final property value를 애니매이션이 끝나고도 유지한다. */
     animation-delay: 2s;
 }

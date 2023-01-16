@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Unbounded:wght@200;300&display=swap');
 @import "reset.css";
-/* 브라우저에 의해 기본 적용되는 css 속성을 초기화 해주는 것 */
 @import "variables.css";
-/* 변수를 저장한 파일 */
-/* 윗 줄에 import 해야 아래에 있는 css 파일에서 변수를 사용할 수 있음, import 의 순서 매우 중요 */
 
 /* Components */
 @import "components/status-bar.css";

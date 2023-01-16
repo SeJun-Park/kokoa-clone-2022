@@ -3,7 +3,6 @@
     top: 0;
     width: 100%;
     box-sizing: border-box;
-    /* status-bar 가 위에 붙어 있게끔 하는 작업 */
     background-color: inherit;
     display: flex;
     justify-content: center;
@@ -32,5 +31,3 @@
 .status-bar__column .fa-battery-full {
     margin:0px 5px;
 }
-
-/* class 안의 class 로 접근하는 방법 */

@@ -3,9 +3,6 @@
     width: 100%;
     bottom: 0;
     box-sizing: border-box;
-    /* nav-bar 가 아래에 붙어 있게끔 하는 작업 */
-    /* box-sizing: border-box; > 강의 참고 */
-    /* to css [내가 준 padding을 적용하되 내 box 전체 사이즈를 늘리지는 말아줘] 라고 하는 것 */
     background-color: #f9f9fa;
     padding: 20px 50px;
     border-top: 1px solid rgba(215, 208, 208, 0.439);
@@ -15,14 +12,6 @@
     display: flex;
     justify-content: space-between;
 }
-
-/* 
-.nav__link {
-    color: inherit;
-    text-decoration: none;
-} 
-reset.css에 작성, 모든 a에 적용되도록
-*/
 
 .nav__link {
     color: #2e363e;
@@ -71,7 +60,6 @@ reset.css에 작성, 모든 a에 적용되도록
 .nav__btn {
     opacity: 0;
     transform: translateY(50px);
-    /* animation-delay 속성을 사용할 때 모든 요소의 속도를 자연스럽게 맞춰주기 위해 초기 transform 요소를 주고 있음 */
     animation: appearBtnAnimation 0.3s ease-in-out forwards;
 }
 

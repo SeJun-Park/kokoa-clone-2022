@@ -9,10 +9,6 @@
 .alt-header__column {
     width: 33%;
 }
-/* 세 개의 column이 같은 너비를 가지게 함 */
-/* 가운데 열은 중앙 정렬, 마지막 열은 display:flex & justify-content = flex-end 함으로써 정리하는 방법 */
-/* + box-sizing: border-box; */
-
 .alt-header__title {
     font-size: 28px;
     font-weight: 600;
